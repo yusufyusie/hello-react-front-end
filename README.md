@@ -98,7 +98,7 @@ Clone this repository to your desired folder:
 Login to your GitHub account. Clone this repository to your desired folder:
 
 > cd my-folder
-> git clone git@github.com:Zilola-Nazarova/hello-react-front-end.git
+> git clone https://github.com/yusufyusie/hello-react-front-end.git
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
