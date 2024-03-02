@@ -1,12 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchGreeting } from '../actions/greetingActions';
 
 const Greeting = () => {
-  const [greeting, setGreeting] = useState('');
+  const dispatch = useDispatch();
+  const { greeting, loading, error } = useSelector(state => state.greeting);
 
   useEffect(() => {
-    // Call API endpoint to get random greeting
-    // Update state with the retrieved greeting
-  }, []);
+    dispatch(fetchGreeting());
+  }, [dispatch]);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div>
@@ -14,6 +19,6 @@ const Greeting = () => {
       <p>{greeting}</p>
     </div>
   );
-}
+};
 
 export default Greeting;
