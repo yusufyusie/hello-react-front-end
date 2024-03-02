@@ -1,0 +1,7 @@
+/* Test rule to see if styles are applied and StyleLint is
+actually working */
+
+.App {
+  background-color: burlywood;
+  color: tomato;
+}
