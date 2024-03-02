@@ -1,6 +1,31 @@
-/* Test rule to see if styles are applied and StyleLint is
-actually working */
-
 body {
-  background-color: aqua;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 22px;
+  line-height: 1.6;
+}
+
+div {
+  max-width: 600px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  padding: 40px;
+  background-color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1em;
+  color: #333;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
