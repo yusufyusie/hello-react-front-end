@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { FETCH_GREETING, SET_GREETING, SET_ERROR } from './types';
 
-export const fetchGreeting = () => async dispatch => {
+const fetchGreeting = () => async (dispatch) => {
   dispatch({ type: FETCH_GREETING });
 
   try {
@@ -14,3 +14,5 @@ export const fetchGreeting = () => async dispatch => {
     dispatch({ type: SET_ERROR, payload: error.message });
   }
 };
+
+export default { fetchGreeting };
